@@ -1,10 +1,13 @@
-export const projects = [
+import { Project } from './types';
+
+export const projects: Project[] = [
   {
     title: 'SYNTH_CORE',
     description:
       'A real-time metrics monitoring system for distributed cloud infrastructure with sub-100ms latency.',
     tags: ['Next.js', 'Rust', 'WebSockets'],
     href: '#',
+    image: '/weave.png',
   },
   {
     title: 'VOID_OS',
@@ -12,6 +15,7 @@ export const projects = [
       'Custom kernel-level driver for high-speed packet filtering and network security orchestration.',
     tags: ['C++', 'eBPF', 'Linux'],
     href: '#',
+    image: '/weave.png',
   },
   {
     title: 'NEURAL_GRID',
@@ -19,19 +23,22 @@ export const projects = [
       'Distributed machine learning pipeline capable of training models across heterogeneous GPU clusters.',
     tags: ['Python', 'CUDA', 'Kubernetes'],
     href: '#',
+    image: '/weave.png',
   },
-  {
-    title: 'CIPHER_VAULT',
-    description:
-      'End-to-end encrypted file storage system with zero-knowledge proof authentication.',
-    tags: ['TypeScript', 'WebCrypto', 'Go'],
-    href: '#',
-  },
-  {
-    title: 'ECHO_RELAY',
-    description:
-      'Low-latency pub/sub message broker handling 1M+ events per second with guaranteed delivery.',
-    tags: ['Rust', 'gRPC', 'Docker'],
-    href: '#',
-  },
+  // {
+  //   title: 'CIPHER_VAULT',
+  //   description:
+  //     'End-to-end encrypted file storage system with zero-knowledge proof authentication.',
+  //   tags: ['TypeScript', 'WebCrypto', 'Go'],
+  //   href: '#',
+  //   image: '/weave.png',
+  // },
+  // {
+  //   title: 'ECHO_RELAY',
+  //   description:
+  //     'Low-latency pub/sub message broker handling 1M+ events per second with guaranteed delivery.',
+  //   tags: ['Rust', 'gRPC', 'Docker'],
+  //   href: '#',
+  //   image: '/weave.png',
+  // },
 ];
