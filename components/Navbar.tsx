@@ -8,25 +8,26 @@ export default function Navbar() {
       </div>
       <div>
         <ul className='flex items-center gap-8'>
-          <li>
+          <li className='transition-transform active:scale-95'>
             <a href='#work' className='font-mono'>
               Work
             </a>
           </li>
-          <li>
+          <li className='transition-transform active:scale-95'>
             <a href='#tech' className='font-mono'>
               Tech
             </a>
           </li>
-          <li>
+          <li className='transition-transform active:scale-95'>
             <a href='#contact' className='font-mono'>
               Contact
             </a>
           </li>
-          <li>
+          <li className='transition-transform active:scale-95'>
             <a
-              href='#'
-              className='font-mono text-sm text-accent border border-accent px-4 py-1.5 hover:bg-accent hover:text-black transition-colors'
+              /*href='/resume.pdf'
+              download*/
+              className='font-mono text-accent border border-accent px-4 py-1.5 hover:bg-accent hover:text-black transition-colors'
             >
               Resume↗
             </a>
