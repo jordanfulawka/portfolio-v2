@@ -6,7 +6,8 @@ export const projects: Project[] = [
     description:
       'A real-time metrics monitoring system for distributed cloud infrastructure with sub-100ms latency.',
     tags: ['Next.js', 'Rust', 'WebSockets'],
-    href: '#',
+    github: '#',
+    live: '#',
     image: '/weave.png',
   },
   {
@@ -14,7 +15,8 @@ export const projects: Project[] = [
     description:
       'Custom kernel-level driver for high-speed packet filtering and network security orchestration.',
     tags: ['C++', 'eBPF', 'Linux'],
-    href: '#',
+    github: '#',
+    live: '#',
     image: '/weave.png',
   },
   {
@@ -22,7 +24,8 @@ export const projects: Project[] = [
     description:
       'Distributed machine learning pipeline capable of training models across heterogeneous GPU clusters.',
     tags: ['Python', 'CUDA', 'Kubernetes'],
-    href: '#',
+    github: '#',
+    live: '#',
     image: '/weave.png',
   },
   // {
