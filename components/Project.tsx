@@ -4,12 +4,12 @@ import { Project as ProjectType } from '@/lib/types';
 
 export default function Project({ project }: { project: ProjectType }) {
   return (
-    <div className=' w-128 aspect-square flex flex-col shrink-0'>
+    <div className='w-lg aspect-square flex flex-col shrink-0'>
       <div className='relative flex-3'>
         <Image
           src={project.image}
           fill
-          className='object-cover'
+          // className='object-cover'
           alt='simply an image of a yote'
         />
       </div>

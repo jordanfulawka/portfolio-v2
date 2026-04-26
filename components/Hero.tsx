@@ -9,9 +9,11 @@ export default function Hero() {
         check styling. yap yap yap
       </p>
       <div className='flex justify-start gap-8'>
-        <button className='bg-accent p-4 text-black text-lg cursor-pointer min-w-50 transition-transform active:scale-95'>
-          View my work
-        </button>
+        <a href='#work'>
+          <button className='bg-accent p-4 text-black text-lg cursor-pointer min-w-50 transition-transform active:scale-95'>
+            View my work
+          </button>
+        </a>
         <a /*href='/resume.pdf' download*/>
           <button className='border border-accent p-4 text-accent cursor-pointer min-w-50 transition-transform active:scale-95'>
             Download Resume
