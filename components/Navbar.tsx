@@ -3,19 +3,19 @@ export default function Navbar() {
     <nav className='fixed top-0 left-0 z-50 right-0 flex items-center justify-between px-8 py-5 text-lg bg-black/80 backdrop-blur-sm'>
       <div>
         <p className='font-mono font-bold tracking-widest text-white'>
-          Portfolio
+          Jordan Fulawka
         </p>
       </div>
       <div>
         <ul className='flex items-center gap-8'>
           <li className='transition-transform active:scale-95'>
-            <a href='#work' className='font-mono'>
-              Work
+            <a href='#projects' className='font-mono'>
+              Projects
             </a>
           </li>
           <li className='transition-transform active:scale-95'>
-            <a href='#tech' className='font-mono'>
-              Tech
+            <a href='#experience' className='font-mono'>
+              Experience
             </a>
           </li>
           <li className='transition-transform active:scale-95'>

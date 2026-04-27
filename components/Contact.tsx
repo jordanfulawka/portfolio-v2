@@ -2,14 +2,14 @@ import { FaEnvelope, FaGithub, FaLinkedin } from 'react-icons/fa';
 
 export default function Contact() {
   return (
-    <div className='min-h-[70vh] flex p-60 font-mono'>
+    <div className='min-h-[70vh] flex p-60 font-mono' id='contact'>
       <div className='bg-surface flex-1 flex'>
         <div className='flex-1 flex items-center'>
           <div className='ml-50'>
             <h1 className='text-5xl'>Let&apos;s Chat!</h1>
             <p className='mt-5'>
-              Feel free to reach our for opportunities, collaborations, or just
-              to say hello.
+              Feel free to reach out for opportunities, collaborations, or just
+              to say hi.
             </p>
           </div>
         </div>

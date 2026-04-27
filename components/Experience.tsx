@@ -2,7 +2,7 @@ import { jobs } from '@/lib/data';
 
 export default function Experience() {
   return (
-    <div className='min-h-[90vh] px-8 font-mono'>
+    <div className='min-h-[90vh] px-8 font-mono' id='experience'>
       <h1 className='text-6xl font-mono mt-40 mb-20'>Work History</h1>
       {jobs.map((job) => {
         return (

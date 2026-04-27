@@ -2,11 +2,11 @@ export default function Hero() {
   return (
     <div className='text-white min-h-screen font-mono flex flex-col justify-center gap-8 ml-5'>
       <p className='tracking-wider text-lime-500'>STATUS: AVAILABLE FOR WORK</p>
-      <h1 className='text-6xl'>Jordan Fulawka&apos;s Portfolio</h1>
-      <p className='max-w-[60%] leading-10 text-slate-300'>
-        This is just a bunch of example text. Here I will write an introduction
-        about my skills and all of that stuff. this is just placeholder text to
-        check styling. yap yap yap
+      <h1 className='text-6xl'>Hi, I&apos;m Jordan.</h1>
+      <p className='max-w-[50%] leading-10 text-slate-300'>
+        Full stack developer driven by curiosity and a genuine love for building
+        and collaboration. I bring my best to everything I work on, big or
+        small. Whatever brings you here, thank you for stopping by.
       </p>
       <div className='flex justify-start gap-8'>
         <a href='#work'>

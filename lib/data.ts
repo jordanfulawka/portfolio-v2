@@ -2,31 +2,31 @@ import { Job, Project } from './types';
 
 export const projects: Project[] = [
   {
-    title: 'SYNTH_CORE',
+    title: 'FitCheck',
     description:
-      'A real-time metrics monitoring system for distributed cloud infrastructure with sub-100ms latency.',
-    tags: ['Next.js', 'Rust', 'WebSockets'],
-    github: '#',
-    live: '#',
-    image: '/weave.png',
+      'An AI-powered job application tracker that analyzes resume-to-job-description fit. Returns a match score, skill gaps, strengths, and a tailored cover letter draft using the Claude API.',
+    tags: ['Next.js', 'TypeScript', 'TailwindCSS', 'Supabase'],
+    github: 'https://github.com/jordanfulawka/fitcheck',
+    live: 'https://fitcheck-amber.vercel.app/',
+    image: '/fitcheck.png',
   },
   {
-    title: 'VOID_OS',
+    title: 'Full Stack Chat Application',
     description:
-      'Custom kernel-level driver for high-speed packet filtering and network security orchestration.',
-    tags: ['C++', 'eBPF', 'Linux'],
-    github: '#',
-    live: '#',
-    image: '/weave.png',
+      'A full-stack real-time chat application featuring user authentication, profile management, and live messaging with image support. A responsive front-end built with React and Zustand, and Node/Express for the backend with Socket.IO for real-time communication',
+    tags: ['React', 'Node.js/Express.js', 'MongoDB', 'Socket.IO'],
+    github: 'https://github.com/jordanfulawka/react-chat-app',
+    live: 'https://react-chat-app-exk4.onrender.com/',
+    image: '/jchat.png',
   },
   {
-    title: 'NEURAL_GRID',
+    title: 'C- Compiler',
     description:
-      'Distributed machine learning pipeline capable of training models across heterogeneous GPU clusters.',
-    tags: ['Python', 'CUDA', 'Kubernetes'],
-    github: '#',
+      'Built a full compiler for C-, a simplified C dialect, covering the complete compilation pipeline from lexical analysis to assembly code generation',
+    tags: ['Java  ', 'JFlex', 'Linux'],
+    github: 'https://github.com/jordanfulawka/cm-compiler',
     live: '#',
-    image: '/weave.png',
+    image: '/compiler.png',
   },
   // {
   //   title: 'CIPHER_VAULT',
