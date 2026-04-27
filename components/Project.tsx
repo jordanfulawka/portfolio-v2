@@ -6,8 +6,8 @@ import { FiExternalLink } from 'react-icons/fi';
 
 export default function Project({ project }: { project: ProjectType }) {
   return (
-    <div className='w-xl flex flex-col shrink-0'>
-      <div className='relative h-85'>
+    <div className='w-lg flex flex-col shrink-0'>
+      <div className='relative h-65'>
         <Image
           src={project.image}
           fill
