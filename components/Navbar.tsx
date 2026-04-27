@@ -25,8 +25,8 @@ export default function Navbar() {
           </li>
           <li className='transition-transform active:scale-95'>
             <a
-              /*href='/resume.pdf'
-              download*/
+              href='/resume.pdf'
+              download
               className='font-mono text-accent border border-accent px-4 py-1.5 hover:bg-accent hover:text-black transition-colors'
             >
               Resume↗
