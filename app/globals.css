@@ -17,4 +17,5 @@ html {
 body {
   background-color: #050505;
   color: #ededed;
+  overflow-y: hidden;
 }
