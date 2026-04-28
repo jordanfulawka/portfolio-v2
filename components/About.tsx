@@ -5,7 +5,7 @@ export default function About() {
   return (
     <TransitionWrapper>
       <div
-        className={`min-h-screen flex flex-col lg:flex-row items-center gap-8 lg:gap-12 px-5 sm:px-10 md:px-16 lg:px-20 py-20 lg:py-24 transition-all duration-700 ease-out `}
+        className={`min-h-screen flex flex-col lg:flex-row items-center gap-8 lg:gap-12 px-5 sm:px-10 md:px-16 lg:px-20 py-20 lg:py-24 `}
         id='about'
       >
         <div className='shrink-0 w-full max-w-sm sm:max-w-md lg:w-96 xl:w-lg'>

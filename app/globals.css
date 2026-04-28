@@ -12,10 +12,11 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
   background-color: #050505;
   color: #ededed;
-  overflow-y: hidden;
+  overflow-x: hidden;
 }
