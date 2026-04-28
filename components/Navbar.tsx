@@ -1,13 +1,20 @@
+'use client';
+
+import { useState } from 'react';
+
 export default function Navbar() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
-    <nav className='fixed top-0 left-0 z-50 right-0 flex items-center justify-between px-8 py-5 text-lg bg-black/80 backdrop-blur-sm'>
+    <nav className='fixed top-0 left-0 z-50 right-0 flex items-center justify-between px-5 sm:px-8 py-5 text-base sm:text-lg bg-black/80 backdrop-blur-sm'>
       <div>
-        <p className='font-mono font-bold tracking-widest text-white'>
+        <p className='font-mono font-bold tracking-widest text-white text-sm sm:text-base'>
           Jordan Fulawka
         </p>
       </div>
-      <div>
-        <ul className='flex items-center gap-8'>
+
+      <div className='hidden md:block'>
+        <ul className='flex items-center gap-6 lg:gap-8'>
           <li className='transition-transform active:scale-95'>
             <a href='#projects' className='font-mono'>
               Projects
@@ -34,6 +41,66 @@ export default function Navbar() {
           </li>
         </ul>
       </div>
+
+      <button
+        className='md:hidden flex flex-col gap-1.5 p-2'
+        onClick={() => setMenuOpen(!menuOpen)}
+        aria-label='Toggle menu'
+      >
+        <span
+          className={`block w-6 h-0.5 bg-white transition-transform duration-200 ${menuOpen ? 'rotate-45 translate-y-2' : ''}`}
+        />
+        <span
+          className={`block w-6 h-0.5 bg-white transition-opacity duration-200 ${menuOpen ? 'opacity-0' : ''}`}
+        />
+        <span
+          className={`block w-6 h-0.5 bg-white transition-transform duration-200 ${menuOpen ? '-rotate-45 -translate-y-2' : ''}`}
+        />
+      </button>
+
+      {menuOpen && (
+        <div className='absolute top-full left-0 right-0 bg-black/95 backdrop-blur-sm md:hidden'>
+          <ul className='flex flex-col font-mono p-5 gap-4'>
+            <li>
+              <a
+                href='#projects'
+                className='block py-2'
+                onClick={() => setMenuOpen(false)}
+              >
+                Projects
+              </a>
+            </li>
+            <li>
+              <a
+                href='#experience'
+                className='block py-2'
+                onClick={() => setMenuOpen(false)}
+              >
+                Experience
+              </a>
+            </li>
+            <li>
+              <a
+                href='#contact'
+                className='block py-2'
+                onClick={() => setMenuOpen(false)}
+              >
+                Contact
+              </a>
+            </li>
+            <li>
+              <a
+                href='/resume.pdf'
+                download
+                className='inline-block text-accent border border-accent px-4 py-2 hover:bg-accent hover:text-black transition-colors'
+                onClick={() => setMenuOpen(false)}
+              >
+                Resume↗
+              </a>
+            </li>
+          </ul>
+        </div>
+      )}
     </nav>
   );
 }
