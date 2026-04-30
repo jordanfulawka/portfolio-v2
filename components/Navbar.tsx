@@ -1,9 +1,37 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState('');
+
+  useEffect(() => {
+    const sections = ['projects', 'experience', 'contact', 'about'];
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
+          }
+        });
+      },
+      {
+        threshold: 0.6,
+      },
+    );
+
+    sections.forEach((section) => {
+      const element = document.getElementById(section);
+      observer.observe(element);
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    console.log(activeSection);
+  }, [activeSection]);
 
   return (
     <nav className='fixed top-0 left-0 z-50 right-0 flex items-center justify-between px-5 sm:px-8 py-5 text-base sm:text-lg bg-black/80 backdrop-blur-sm'>
@@ -15,17 +43,23 @@ export default function Navbar() {
 
       <div className='hidden md:block'>
         <ul className='flex items-center gap-6 lg:gap-8'>
-          <li className='transition-transform active:scale-95'>
+          <li
+            className={`transition-transform active:scale-95 ${activeSection === 'projects' ? 'scale-90 text-accent' : ''}`}
+          >
             <a href='#projects' className='font-mono'>
               Projects
             </a>
           </li>
-          <li className='transition-transform active:scale-95'>
+          <li
+            className={`transition-transform active:scale-95 ${activeSection === 'experience' ? 'scale-90 text-accent' : ''}`}
+          >
             <a href='#experience' className='font-mono'>
               Experience
             </a>
           </li>
-          <li className='transition-transform active:scale-95'>
+          <li
+            className={`transition-transform active:scale-95 ${activeSection === 'contact' ? 'scale-90 text-accent' : ''}`}
+          >
             <a href='#contact' className='font-mono'>
               Contact
             </a>
