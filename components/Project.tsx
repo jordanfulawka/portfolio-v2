@@ -6,7 +6,7 @@ import { FiExternalLink } from 'react-icons/fi';
 
 export default function Project({ project }: { project: ProjectType }) {
   return (
-    <div className='w-full max-w-lg flex flex-col'>
+    <div className='w-full max-w-lg flex flex-col border border-transparent hover:border-accent transition-colors duration-300'>
       <div className='relative h-52 sm:h-60'>
         <Image
           src={project.image}
