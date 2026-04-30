@@ -12,11 +12,11 @@
 
 html {
   scroll-behavior: smooth;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 body {
   background-color: #050505;
   color: #ededed;
-  overflow-x: hidden;
+  overflow-x: clip;
 }

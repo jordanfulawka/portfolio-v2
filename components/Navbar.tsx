@@ -23,7 +23,7 @@ export default function Navbar() {
 
     sections.forEach((section) => {
       const element = document.getElementById(section);
-      observer.observe(element);
+      if (element) observer.observe(element);
     });
 
     return () => observer.disconnect();
