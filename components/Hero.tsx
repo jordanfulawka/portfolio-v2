@@ -32,7 +32,13 @@ export default function Hero() {
         small. Whatever brings you here, thank you for stopping by.
       </p>
       <div className='flex flex-col sm:flex-row justify-start gap-4 sm:gap-8'>
-        <a href='#projects'>
+        <a
+          onClick={() =>
+            document
+              .getElementById('projects')
+              ?.scrollIntoView({ behavior: 'smooth' })
+          }
+        >
           <button className='bg-accent p-4 text-black text-base sm:text-lg cursor-pointer w-full sm:w-auto sm:min-w-50 transition-transform active:scale-95'>
             View my work
           </button>
