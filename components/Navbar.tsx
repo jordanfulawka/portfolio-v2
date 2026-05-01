@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import ScrollProgressBar from './ScrollProgressBar';
 
 function scrollTo(id: string) {
   document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
@@ -135,6 +136,7 @@ export default function Navbar() {
           </ul>
         </div>
       )}
+      <ScrollProgressBar />
     </nav>
   );
 }
