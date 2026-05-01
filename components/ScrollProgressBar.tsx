@@ -18,10 +18,6 @@ export default function ScrollProgressBar() {
     return () => window.removeEventListener('scroll', updateScroll);
   }, []);
 
-  useEffect(() => {
-    console.log(scrollProgress);
-  }, [scrollProgress]);
-
   return (
     <div
       className={`fixed left-0 top-16 bg-accent h-1`}

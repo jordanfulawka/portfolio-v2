@@ -1,7 +1,15 @@
+'use client';
+
 import { FaEnvelope, FaGithub, FaLinkedin } from 'react-icons/fa';
+import { Toaster, toast } from 'sonner';
 import TransitionWrapper from './TransitionWrapper';
 
 export default function Contact() {
+  function handleEmailClick() {
+    navigator.clipboard.writeText('jordan.fulawka@outlook.com');
+    toast.success('Email copied to clipboard');
+  }
+
   return (
     <TransitionWrapper>
       <div
@@ -36,11 +44,21 @@ export default function Contact() {
                 size={44}
               />
             </a>
-            <a href='mailto:jordan.fulawka@outlook.com'>
+            <a>
               <FaEnvelope
+                onClick={handleEmailClick}
                 className='inline transition-transform hover:scale-125'
                 color='#00d4ff'
                 size={44}
+              />
+              <Toaster
+                toastOptions={{
+                  style: {
+                    background: 'green',
+                    borderColor: 'white',
+                    color: 'white',
+                  },
+                }}
               />
             </a>
           </div>
