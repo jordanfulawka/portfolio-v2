@@ -5,10 +5,10 @@ export const projects: Project[] = [
     title: 'FitCheck',
     description:
       'An AI-powered job application tracker that analyzes resume-to-job-description fit. Returns a match score, skill gaps, strengths, and a tailored cover letter draft using the Claude API.',
-    tags: ['Next.js', 'TypeScript', 'TailwindCSS', 'Supabase'],
-    github: 'https://github.com/jordanfulawka/fitcheck',
-    live: 'https://fitcheck-amber.vercel.app/',
-    image: '/fitcheck.png',
+    tags: ['Next.js', 'TypeScript', 'TailwindCSS', 'MongoDB'],
+    github: 'https://github.com/jordanfulawka/fitcheck-v2',
+    live: 'https://fitcheck-v2.vercel.app',
+    image: '/fitcheck-v2.png',
   },
   {
     title: 'Full Stack Chat Application',
