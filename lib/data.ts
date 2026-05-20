@@ -11,13 +11,20 @@ export const projects: Project[] = [
     image: '/fitcheck-v2.png',
   },
   {
-    title: 'Full Stack Chat Application',
+    title: 'Gather',
     description:
-      'A full-stack real-time chat application featuring user authentication, profile management, and live messaging with image support. A responsive front-end built with React and Zustand, and Node/Express for the backend with Socket.IO for real-time communication',
-    tags: ['React', 'Node.js/Express.js', 'MongoDB', 'Socket.IO'],
-    github: 'https://github.com/jordanfulawka/react-chat-app',
-    live: 'https://react-chat-app-exk4.onrender.com/',
-    image: '/jchat.png',
+      'A real-time group chat app built with Next.js, Socket.io, and MongoDB. Supports private rooms with invite codes, persistent message history, and live messaging via WebSockets.',
+    tags: [
+      'Next.js',
+      'React',
+      'Socket.io',
+      'MongoDB/Mongoose',
+      'NextAuth.js',
+      'Tailwind CSS',
+    ],
+    github: 'https://github.com/jordanfulawka/gather',
+    live: 'https://gather-rkj4.onrender.com/rooms',
+    image: '/gather.png',
   },
   {
     title: 'C- Compiler',
@@ -28,22 +35,6 @@ export const projects: Project[] = [
     live: '#',
     image: '/compiler.png',
   },
-  // {
-  //   title: 'CIPHER_VAULT',
-  //   description:
-  //     'End-to-end encrypted file storage system with zero-knowledge proof authentication.',
-  //   tags: ['TypeScript', 'WebCrypto', 'Go'],
-  //   href: '#',
-  //   image: '/weave.png',
-  // },
-  // {
-  //   title: 'ECHO_RELAY',
-  //   description:
-  //     'Low-latency pub/sub message broker handling 1M+ events per second with guaranteed delivery.',
-  //   tags: ['Rust', 'gRPC', 'Docker'],
-  //   href: '#',
-  //   image: '/weave.png',
-  // },
 ];
 
 export const jobs: Job[] = [
