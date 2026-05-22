@@ -1,10 +1,19 @@
 'use client';
 
+import { GitHubActivity } from '@/lib/types';
 import { useEffect, useState } from 'react';
 
 const msg = "Hi, I'm Jordan.";
 
-export default function Hero() {
+function timeAgo(dateStr: string): string {
+  const diff = Date.now() - new Date(dateStr).getTime();
+  const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+  if (days === 0) return 'today';
+  if (days === 1) return '1 day ago';
+  return `${days} days ago`;
+}
+
+export default function Hero({ activity }: { activity: GitHubActivity }) {
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
@@ -48,6 +57,16 @@ export default function Hero() {
             Download Resume
           </button>
         </a>
+      </div>
+      <div className='border border-gray-700 bg-surface px-4 py-3 text-xs sm:text-sm w-full sm:w-fit max-w-full sm:max-w-lg'>
+        <p className='text-muted tracking-widest text-xs mb-2'>LATEST COMMIT</p>
+        <p>
+          <span className='text-lime-500'>❯ </span>
+          <span className='text-accent'>jordanfulawka/</span>
+          <span className='text-foreground'>{activity.commit.repo}</span>
+          <span className='text-muted'> · {timeAgo(activity.commit.date)}</span>
+        </p>
+        <p className='text-slate-400 mt-1 pl-4 truncate'>{activity.commit.message}</p>
       </div>
     </div>
   );

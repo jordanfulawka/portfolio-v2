@@ -1,3 +1,17 @@
+export type GitHubCommit = {
+  date: string;
+  languages: Record<string, number>;
+  message: string;
+  repo: string;
+};
+
+export type GitHubActivity = {
+  status: string;
+  top3: Record<string, string>;
+  commit: GitHubCommit;
+  totalCommits: number;
+};
+
 export type Project = {
   title: string;
   description: string;
