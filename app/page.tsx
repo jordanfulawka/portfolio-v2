@@ -7,7 +7,9 @@ import Projects from '@/components/Projects';
 import { GitHubActivity } from '@/lib/types';
 
 export default async function Home() {
-  const res = await fetch(`${process.env.PORTFOLIO_API_URL}/api/activity`);
+  const res = await fetch(`${process.env.PORTFOLIO_API_URL}/api/activity`, {
+    next: { revalidate: 300 },
+  });
   const data: GitHubActivity = await res.json();
   return (
     <>
