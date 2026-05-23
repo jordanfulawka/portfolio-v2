@@ -9,6 +9,8 @@ export type GitHubActivity = {
   status: string;
   top3: Record<string, string>;
   commit: GitHubCommit;
+  cumulative_total: Record<string, string | number>;
+  daily_average: Record<string, string | number>;
   totalCommits: number;
 };
 
