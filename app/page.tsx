@@ -11,6 +11,7 @@ export default async function Home() {
     next: { revalidate: 300 },
   });
   const data: GitHubActivity = await res.json();
+
   return (
     <>
       <Navbar />
