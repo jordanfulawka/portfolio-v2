@@ -1,12 +1,59 @@
+'use client';
+
 import Image from 'next/image';
 import Tag from './Tag';
 import { Project as ProjectType } from '@/lib/types';
 import { FaGithub } from 'react-icons/fa';
 import { FiExternalLink } from 'react-icons/fi';
+import { useRef } from 'react';
 
 export default function Project({ project }: { project: ProjectType }) {
+  const cardRef = useRef<HTMLDivElement>(null);
+
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    const card = cardRef.current;
+    if (!card) return;
+    const { left, top, width, height } = card.getBoundingClientRect();
+    const x = e.clientX - left;
+    const y = e.clientY - top;
+    const centerX = width / 2;
+    const centerY = height / 2;
+    const rotateX = ((y - centerY) / centerY) * 8;
+    const rotateY = ((centerX - x) / centerX) * 8;
+    const shadowX = rotateY * 1.5;
+    const shadowY = -rotateX * 1.5;
+    card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+    card.style.boxShadow = `${shadowX}px ${shadowY}px 30px rgba(255,255,255,0.06), 0 20px 40px rgba(0,0,0,0.5)`;
+  };
+
+  const handleMouseLeave = () => {
+    const card = cardRef.current;
+    if (!card) return;
+    card.style.transition =
+      'transform 0.4s ease-out, box-shadow 0.4s ease-out, border-color 0s';
+    card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+    card.style.boxShadow = '0 0 20px rgba(255,255,255,0.30)';
+  };
+
+  const handleMouseEnter = () => {
+    const card = cardRef.current;
+    if (!card) return;
+    card.style.transition = 'transform 0.1s ease-out, box-shadow 0.1s ease-out';
+  };
+
   return (
-    <div className='w-full max-w-lg flex flex-col border border-transparent hover:border-accent transition-colors duration-300'>
+    <div
+      ref={cardRef}
+      onMouseMove={handleMouseMove}
+      onMouseLeave={handleMouseLeave}
+      onMouseEnter={handleMouseEnter}
+      className='w-full max-w-lg flex flex-col'
+      style={{
+        transformStyle: 'preserve-3d',
+        transition: 'none',
+        boxShadow: '0 0 20px rgba(255,255,255,0.30)',
+      }}
+    >
       <div className='relative h-52 sm:h-60'>
         <Image
           src={project.image}
