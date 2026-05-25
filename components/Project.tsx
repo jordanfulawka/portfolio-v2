@@ -6,11 +6,14 @@ import { Project as ProjectType } from '@/lib/types';
 import { FaGithub } from 'react-icons/fa';
 import { FiExternalLink } from 'react-icons/fi';
 import { useRef } from 'react';
+import { usePerformance } from '@/context/PerformanceProvider';
 
 export default function Project({ project }: { project: ProjectType }) {
   const cardRef = useRef<HTMLDivElement>(null);
+  const { performanceMode } = usePerformance();
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (performanceMode) return;
     const card = cardRef.current;
     if (!card) return;
     const { left, top, width, height } = card.getBoundingClientRect();
@@ -23,10 +26,11 @@ export default function Project({ project }: { project: ProjectType }) {
     const shadowX = rotateY * 1.5;
     const shadowY = -rotateX * 1.5;
     card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
-    card.style.boxShadow = `${shadowX}px ${shadowY}px 30px rgba(255,255,255,0.06), 0 20px 40px rgba(0,0,0,0.5)`;
+    card.style.boxShadow = `${shadowX}px ${shadowY}px 30px rgba(255,255,255,0.30), 0 20px 40px rgba(0,0,0,0.5)`;
   };
 
   const handleMouseLeave = () => {
+    if (performanceMode) return;
     const card = cardRef.current;
     if (!card) return;
     card.style.transition =
@@ -36,6 +40,7 @@ export default function Project({ project }: { project: ProjectType }) {
   };
 
   const handleMouseEnter = () => {
+    if (performanceMode) return;
     const card = cardRef.current;
     if (!card) return;
     card.style.transition = 'transform 0.1s ease-out, box-shadow 0.1s ease-out';

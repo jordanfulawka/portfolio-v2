@@ -1,7 +1,9 @@
 'use client';
 
+import { usePerformance } from '@/context/PerformanceProvider';
 import { GitHubActivity } from '@/lib/types';
 import { useEffect, useState } from 'react';
+import { FaBolt } from 'react-icons/fa';
 
 const msg = "Hi, I'm Jordan.";
 
@@ -15,6 +17,7 @@ function timeAgo(dateStr: string): string {
 
 export default function Hero({ activity }: { activity: GitHubActivity }) {
   const [index, setIndex] = useState(0);
+  const { performanceMode, togglePerformanceMode } = usePerformance();
 
   useEffect(() => {
     const intervalID = setInterval(() => {
@@ -25,12 +28,18 @@ export default function Hero({ activity }: { activity: GitHubActivity }) {
       clearInterval(intervalID);
     }, 5000);
   }, []);
-  useEffect(() => {
-    console.log(activity);
-  }, [activity]);
 
   return (
     <div className='text-white min-h-screen font-mono flex flex-col justify-center gap-6 sm:gap-8 px-5 sm:px-10 md:px-16 lg:px-20 pt-20'>
+      <div className='flex items-center absolute right-0 top-20 p-5'>
+        <span className='text-xs'>Performance Mode:</span>
+        <FaBolt
+          color={performanceMode ? '#00d4ff' : ''}
+          onClick={togglePerformanceMode}
+          size={32}
+          className='cursor-pointer'
+        />
+      </div>
       <p className='tracking-wider text-lime-500 text-xs sm:text-sm md:text-base'>
         STATUS: AVAILABLE FOR WORK
       </p>
