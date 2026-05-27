@@ -1,5 +1,6 @@
 'use client';
 
+import { usePerformance } from '@/context/PerformanceProvider';
 import { useInView } from 'react-intersection-observer';
 
 export default function TransitionWrapper({
@@ -11,6 +12,12 @@ export default function TransitionWrapper({
     threshold: 0.3,
     triggerOnce: true,
   });
+
+  const { performanceMode } = usePerformance();
+
+  if (performanceMode) {
+    return <div>{children}</div>;
+  }
   return (
     <div
       ref={ref}

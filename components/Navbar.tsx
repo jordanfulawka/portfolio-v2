@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import ScrollProgressBar from './ScrollProgressBar';
+import { usePerformance } from '@/context/PerformanceProvider';
 
 function scrollTo(id: string) {
   document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
@@ -10,6 +11,8 @@ function scrollTo(id: string) {
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('');
+
+  const { performanceMode } = usePerformance();
 
   useEffect(() => {
     const sections = ['projects', 'experience', 'contact', 'about'];
@@ -136,7 +139,7 @@ export default function Navbar() {
           </ul>
         </div>
       )}
-      <ScrollProgressBar />
+      {!performanceMode && <ScrollProgressBar />}
     </nav>
   );
 }
