@@ -13,17 +13,17 @@ export const projects: Project[] = [
   {
     title: 'Gather',
     description:
-      'A real-time group chat app built with Next.js, Socket.io, and MongoDB. Supports private rooms with invite codes, persistent message history, and live messaging via WebSockets.',
+      'A real-time group chat app scaled to a distributed architecture with two independent Node.js/Socket.io servers, backed by nginx and Redis.',
     tags: [
-      'Next.js',
-      'React',
+      'Node.js/Express.js',
       'Socket.io',
-      'MongoDB/Mongoose',
-      'NextAuth.js',
-      'Tailwind CSS',
+      'PostgreSQL',
+      'Redis',
+      'nginx',
+      'Docker',
     ],
-    github: 'https://github.com/jordanfulawka/gather',
-    live: 'https://gather-rkj4.onrender.com/rooms',
+    github: 'https://github.com/jordanfulawka/gather-distributed',
+    live: 'http://198.211.110.134/',
     image: '/gather.png',
   },
   {
@@ -41,9 +41,9 @@ export const jobs: Job[] = [
   {
     title: 'Application Developer',
     description: [
-      'Built responsive, production-grade front-end interfaces in React that improved operational efficiency for farmers and vendors by approximately 20%',
-      'Designed and implemented RESTful APIs and server-side logic using Node.js and Express.js to support real-time agricultural workflows',
-      'Configured AWS CloudFormation templates to provision and manage ECS infrastructure, enabling consistent deployment across client environments',
+      'Built and shipped production React interfaces streamlining order management and field reporting workflows for farmers and vendors across client environment',
+      'Designed RESTful APIs and Express.js middleware to support real-time agricultural data flows, including input validation, error handling, and route-level business logic',
+      'Built a notification dashboard surfacing actionable items, consolidating time-sensitive workflow alerts into a single interface across client environment',
     ],
     date: 'January 2025 - September 2025',
     company: 'Kenna',
@@ -52,9 +52,9 @@ export const jobs: Job[] = [
   {
     title: 'BI Software Developer',
     description: [
-      'Developed and optimized SQL procedures powering business reports consumed by hundreds of stakeholders and BASF representatives across Canada',
-      'Designed and built interactive Tableau dashboards to visualize key performance metrics, enabling data-driven decision-making at scale',
-      'Collaborated with business stakeholders to translate reporting requirements into reliable, maintainable data pipelines',
+      'Authored and optimized SQL stored procedures powering business-critical reports consumed by hundreds of stakeholders and BASF representatives across Canada',
+      'Designed interactive Tableau dashboards translating complex agricultural KPIs into clear, actionable visualizations',
+      'Partnered with business stakeholders to translate reporting requirements into maintainable data pipelines, iterating on deliverables through feedback cycles',
     ],
     date: 'May 2024 - August 2024',
     company: 'Kenna',
@@ -63,9 +63,9 @@ export const jobs: Job[] = [
   {
     title: 'Data Reporter',
     description: [
-      'Wrote and maintained SQL scripts to extract and surface data for reports distributed to hundreds of internal and client-facing stakeholders',
-      'Designed clear, intuitive report layouts that distilled complex datasets into actionable insights for non-technical audiences',
-      'Worked directly with stakeholders to gather requirements and iterate on deliverables, ensuring timely and accurate delivery',
+      'Wrote and maintained SQL scripts to extract and transform operational data for reports reaching 50+ internal and client-facing stakeholders',
+      'Designed intuitive report layouts that translated complex datasets into clear, actionable insights for non-technical decision-makers',
+      'Performed QA on data extracts using Excel and SQL to validate accuracy before stakeholder distribution',
     ],
     date: 'May 2023 - December 2023',
     company: 'Kenna',
