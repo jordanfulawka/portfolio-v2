@@ -23,7 +23,7 @@ export const projects: Project[] = [
       'Docker',
     ],
     github: 'https://github.com/jordanfulawka/gather-distributed',
-    live: 'http://198.211.110.134/',
+    live: 'https://gather-chat.dev',
     image: '/gather.png',
   },
   {
