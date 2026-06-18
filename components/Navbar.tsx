@@ -38,7 +38,7 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className='fixed top-0 left-0 z-50 right-0 flex items-center justify-between px-5 sm:px-8 py-5 text-base sm:text-lg bg-black/80 backdrop-blur-sm'>
+    <nav className='fixed top-0 left-0 z-50 right-0 flex items-center justify-between px-5 sm:px-8 py-4 text-sm sm:text-base bg-black/80 backdrop-blur-sm'>
       <div>
         <p className='font-mono font-bold tracking-widest text-white text-sm sm:text-base'>
           Jordan Fulawka
@@ -48,21 +48,21 @@ export default function Navbar() {
       <div className='hidden md:block'>
         <ul className='flex items-center gap-6 lg:gap-8'>
           <li
-            className={`transition-transform active:scale-95 ${activeSection === 'projects' ? 'scale-90 text-accent' : ''}`}
+            className={`cursor-pointer transition-transform active:scale-95 ${activeSection === 'projects' ? 'scale-90 text-accent' : ''}`}
           >
             <a onClick={() => scrollTo('projects')} className='font-mono'>
               Projects
             </a>
           </li>
           <li
-            className={`transition-transform active:scale-95 ${activeSection === 'experience' ? 'scale-90 text-accent' : ''}`}
+            className={`cursor-pointer transition-transform active:scale-95 ${activeSection === 'experience' ? 'scale-90 text-accent' : ''}`}
           >
             <a onClick={() => scrollTo('experience')} className='font-mono'>
               Experience
             </a>
           </li>
           <li
-            className={`transition-transform active:scale-95 ${activeSection === 'contact' ? 'scale-90 text-accent' : ''}`}
+            className={`cursor-pointer transition-transform active:scale-95 ${activeSection === 'contact' ? 'scale-90 text-accent' : ''}`}
           >
             <a onClick={() => scrollTo('contact')} className='font-mono'>
               Contact
