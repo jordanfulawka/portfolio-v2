@@ -35,15 +35,25 @@ export const projects: Project[] = [
     live: '#',
     image: '/compiler.png',
   },
+  {
+    title: 'Weave',
+    description:
+      'A real-time collaborative notes app with Google-Docs style multi-user editing (React, Tiptap, Yjs/Hocuspocus) and an interactive graph view for navigating linked documents, backed by Express and PostgreSQL',
+    tags: ['Vite', 'Hocuspocus', 'Yjs', 'PostgreSQL', 'React Flow', 'Tiptap'],
+    github: 'https://github.com/jordanfulawka/weave',
+    live: 'https://weavenotes.dev/',
+    image: '/weaveapp.png',
+  },
 ];
 
 export const jobs: Job[] = [
   {
     title: 'Application Developer',
     description: [
-      'Built and shipped production React interfaces streamlining order management and field reporting workflows for farmers and vendors across client environment',
-      'Designed RESTful APIs and Express.js middleware to support real-time agricultural data flows, including input validation, error handling, and route-level business logic',
-      'Built a notification dashboard surfacing actionable items, consolidating time-sensitive workflow alerts into a single interface across client environment',
+      'Shipped production React interfaces on the public-facing BASF AgPro platform, streamlining order management and field reporting workflows for growers and vendors',
+      'Built a notification dashboard consolidating time-sensitive, pending alerts into a single interface for three distinct user types: growers, sales reps, and internal staff - surfacing only what each role needed',
+      'Developed Node.js/Express APIs backed by stored procedures in Microsoft SQL Server, with input validation, error handling, and route-level business logic for agricultural data workflows',
+      'Wrote Mocha test suites covering frontend interface behavior to catch regressions before release',
     ],
     date: 'January 2025 - September 2025',
     company: 'Kenna',
@@ -52,9 +62,9 @@ export const jobs: Job[] = [
   {
     title: 'BI Software Developer',
     description: [
-      'Authored and optimized SQL stored procedures powering business-critical reports consumed by hundreds of stakeholders and BASF representatives across Canada',
-      'Designed interactive Tableau dashboards translating complex agricultural KPIs into clear, actionable visualizations',
-      'Partnered with business stakeholders to translate reporting requirements into maintainable data pipelines, iterating on deliverables through feedback cycles',
+      'Authored and optimized SQL stored procedures powering business-critical reports used by hundreds of BASF representatives across Canada',
+      'Built interactive Tableau dashboards that turned complex agricultural KPIs into visualizations business teams could act on directly',
+      'Partnered with stakeholders to translate reporting requirements into maintainable data pipelines, iterating on deliverables through feedback cycles',
     ],
     date: 'May 2024 - August 2024',
     company: 'Kenna',
@@ -64,7 +74,6 @@ export const jobs: Job[] = [
     title: 'Data Reporter',
     description: [
       'Wrote and maintained SQL scripts to extract and transform operational data for reports reaching 50+ internal and client-facing stakeholders',
-      'Designed intuitive report layouts that translated complex datasets into clear, actionable insights for non-technical decision-makers',
       'Performed QA on data extracts using Excel and SQL to validate accuracy before stakeholder distribution',
     ],
     date: 'May 2023 - December 2023',
