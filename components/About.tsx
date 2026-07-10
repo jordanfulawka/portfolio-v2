@@ -14,11 +14,17 @@ import {
   SiGit,
   SiDocker,
   SiLinux,
+  SiSocketdotio,
+  SiGithubactions,
+  SiRedis,
+  SiJest,
+  SiMocha,
 } from 'react-icons/si';
 import { MdKeyboardCommandKey } from 'react-icons/md';
 import { FaJava } from 'react-icons/fa';
 import { IoLogoTableau } from 'react-icons/io5';
 import { IoIosCloud } from 'react-icons/io';
+import { PiFileSql } from 'react-icons/pi';
 
 export default function About() {
   return (
@@ -92,12 +98,13 @@ export default function About() {
                 name='Python'
                 icon={<SiPython size={32} color='#3776AB' />}
               />
+              <TechBadge name='Socket.IO' icon={<SiSocketdotio size={32} />} />
               <TechBadge name='Java' icon={<FaJava size={32} />} />
             </div>
           </div>
           <div className='flex flex-col gap-3'>
             <span className='text-accent uppercase tracking-widest'>
-              Databases & Data
+              Databases
             </span>
             <div className='flex gap-3 flex-wrap'>
               <TechBadge
@@ -113,13 +120,26 @@ export default function About() {
                 icon={<SiPostgresql size={32} color='#4169E1' />}
               />
               <TechBadge
+                name='Microsoft SQL Server'
+                icon={<PiFileSql size={32} color='#CC2927' />}
+              />
+            </div>
+          </div>
+          <div className='flex flex-col gap-3'>
+            <span className='text-accent uppercase tracking-widest'>
+              Data & Analytics
+            </span>
+            <div className='flex gap-3 flex-wrap'>
+              <TechBadge
                 name='Tableau'
                 icon={<IoLogoTableau size={32} color='7dd3fc' />}
               />
             </div>
           </div>
           <div className='flex flex-col gap-3'>
-            <span className='text-accent uppercase tracking-widest'>Tools</span>
+            <span className='text-accent uppercase tracking-widest'>
+              Tools & Infrastructure
+            </span>
             <div className='flex gap-3 flex-wrap'>
               <TechBadge
                 name='Git'
@@ -136,6 +156,29 @@ export default function About() {
               <TechBadge
                 name='Linux'
                 icon={<SiLinux size={32} color='#FCC624' />}
+              />
+              <TechBadge
+                name='GitHub Actions (CI/CD)'
+                icon={<SiGithubactions size={32} color='#2088FF' />}
+              />
+              <TechBadge
+                name='Redis'
+                icon={<SiRedis size={32} color='#DC382D' />}
+              />
+            </div>
+          </div>
+          <div className='flex flex-col gap-3'>
+            <span className='text-accent uppercase tracking-widest'>
+              Testing
+            </span>
+            <div className='flex gap-3 flex-wrap'>
+              <TechBadge
+                name='Jest'
+                icon={<SiJest size={32} color='#C21325' />}
+              />
+              <TechBadge
+                name='Mocha'
+                icon={<SiMocha size={32} color='#8D6748' />}
               />
             </div>
           </div>
