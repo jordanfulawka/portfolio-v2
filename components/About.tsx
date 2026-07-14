@@ -37,7 +37,7 @@ export default function About() {
           <div className='shrink-0 w-full max-w-xs sm:max-w-sm lg:w-72 xl:w-80'>
             <Image
               alt='placeholder picture'
-              src='/weave.png'
+              src='/self_pic.jpg'
               className='aspect-square object-cover w-full'
               width={300}
               height={300}
