@@ -63,7 +63,7 @@ export default function About() {
         {/* carousel */}
         <div className='flex overflow-x-hidden pb-5'>
           {/* group */}
-          <div className='flex grow-0 shrink-0 gap-20 carousel-animation pr-10 opacity-50 grayscale'>
+          <div className='flex grow-0 shrink-0 gap-20 carousel-animation pr-15 opacity-50 grayscale'>
             <SiReact size={50} color='#ededed' />
             <SiNextdotjs size={50} color='#ededed' />
             <SiTailwindcss size={50} color='#ededed' />
@@ -89,7 +89,7 @@ export default function About() {
           </div>
           <div
             aria-hidden
-            className='flex grow-0 shrink-0 gap-10 carousel-animation pr-10'
+            className='flex grow-0 shrink-0 gap-20 carousel-animation pr-15 opacity-50 grayscale'
           >
             <SiReact size={50} color='#ededed' />
             <SiNextdotjs size={50} color='#ededed' />

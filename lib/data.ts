@@ -44,6 +44,23 @@ export const projects: Project[] = [
     live: 'https://weavenotes.dev/',
     image: '/weaveapp.png',
   },
+  {
+    title: 'Pact',
+    description:
+      "A real-time accountability app where two people commit to a shared goal, check in daily to build a streak together, and see their partner's progress live via Socket.IO. Includes a calendar view of check-in history and JWT-based auth.",
+    tags: [
+      'Next.js',
+      'TypeScript',
+      'TailwindCSS',
+      'Express.js',
+      'Socket.IO',
+      'PostgreSQL',
+      'node-cron',
+    ],
+    github: 'https://github.com/jordanfulawka/pact',
+    live: 'https://pact-client.onrender.com/',
+    image: '/pact.png',
+  },
 ];
 
 export const jobs: Job[] = [
