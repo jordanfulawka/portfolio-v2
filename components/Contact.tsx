@@ -26,6 +26,7 @@ export default function Contact() {
             <div className='w-3 h-3 bg-[#ef4444] rounded-full' />
             <div className='w-3 h-3 bg-[#eab308] rounded-full' />
             <div className='w-3 h-3 bg-[#22c55e] rounded-full' />
+            <p className='text-xs font-mono text-gray-600 pl-3'>~/contact</p>
           </div>
           <div className='flex-1 flex flex-col p-10 gap-3'>
             <p>

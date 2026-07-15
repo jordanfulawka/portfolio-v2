@@ -60,6 +60,61 @@ export default function About() {
             </div>
           </div>
         </div>
+        {/* carousel */}
+        <div className='flex overflow-x-hidden pb-5'>
+          {/* group */}
+          <div className='flex grow-0 shrink-0 gap-20 carousel-animation pr-10 opacity-50 grayscale'>
+            <SiReact size={50} color='#ededed' />
+            <SiNextdotjs size={50} color='#ededed' />
+            <SiTailwindcss size={50} color='#ededed' />
+            <SiTypescript size={50} color='#ededed' />
+            <SiNodedotjs size={50} color='#ededed' />
+            <MdKeyboardCommandKey size={50} color='#ededed' />
+            <SiPython size={50} color='#ededed' />
+            <SiSocketdotio size={50} color='#ededed' />
+            <FaJava size={50} color='#ededed' />
+            <SiMongodb size={50} color='#ededed' />
+            <SiSupabase size={50} color='#ededed' />
+            <SiPostgresql size={50} color='#ededed' />
+            <PiFileSql size={50} color='#ededed' />
+            <IoLogoTableau size={50} color='#ededed' />
+            <SiGit size={50} color='#ededed' />
+            <SiDocker size={50} color='#ededed' />
+            <IoIosCloud size={50} color='#ededed' />
+            <SiLinux size={50} color='#ededed' />
+            <SiGithubactions size={50} color='#ededed' />
+            <SiRedis size={50} color='#ededed' />
+            <SiJest size={50} color='#ededed' />
+            <SiMocha size={50} color='#ededed' />
+          </div>
+          <div
+            aria-hidden
+            className='flex grow-0 shrink-0 gap-10 carousel-animation pr-10'
+          >
+            <SiReact size={50} color='#ededed' />
+            <SiNextdotjs size={50} color='#ededed' />
+            <SiTailwindcss size={50} color='#ededed' />
+            <SiTypescript size={50} color='#ededed' />
+            <SiNodedotjs size={50} color='#ededed' />
+            <MdKeyboardCommandKey size={50} color='#ededed' />
+            <SiPython size={50} color='#ededed' />
+            <SiSocketdotio size={50} color='#ededed' />
+            <FaJava size={50} color='#ededed' />
+            <SiMongodb size={50} color='#ededed' />
+            <SiSupabase size={50} color='#ededed' />
+            <SiPostgresql size={50} color='#ededed' />
+            <PiFileSql size={50} color='#ededed' />
+            <IoLogoTableau size={50} color='#ededed' />
+            <SiGit size={50} color='#ededed' />
+            <SiDocker size={50} color='#ededed' />
+            <IoIosCloud size={50} color='#ededed' />
+            <SiLinux size={50} color='#ededed' />
+            <SiGithubactions size={50} color='#ededed' />
+            <SiRedis size={50} color='#ededed' />
+            <SiJest size={50} color='#ededed' />
+            <SiMocha size={50} color='#ededed' />
+          </div>
+        </div>
         <div className='grid grid-cols-2 font-mono gap-10'>
           <div className='flex flex-col gap-3'>
             <span className='text-accent uppercase tracking-widest'>

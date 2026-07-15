@@ -32,3 +32,16 @@ body {
 .toast-terminal {
   animation: toast-fade-in 0.35s ease-out;
 }
+
+@keyframes carouselSpin {
+  from {
+    translate: 0;
+  }
+  to {
+    translate: -100%;
+  }
+}
+
+.carousel-animation {
+  animation: carouselSpin 40s infinite linear;
+}
