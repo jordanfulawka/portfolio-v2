@@ -19,3 +19,16 @@ body {
   color: #ededed;
   overflow-x: clip;
 }
+
+@keyframes toast-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.toast-terminal {
+  animation: toast-fade-in 0.35s ease-out;
+}
