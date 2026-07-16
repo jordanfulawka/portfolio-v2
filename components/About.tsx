@@ -43,7 +43,7 @@ export default function About() {
               height={300}
             />
           </div>
-          <div className='flex flex-col gap-8 w-full lg:gap-0 lg:h-96 lg:justify-around'>
+          <div className='flex flex-col gap-8 w-full lg:gap-0 lg:h-96 lg:justify-around mb-5'>
             <div>
               <h1 className='text-2xl sm:text-3xl lg:text-4xl xl:text-5xl mb-4 font-mono'>
                 A little bit about me
@@ -237,6 +237,16 @@ export default function About() {
               />
             </div>
           </div>
+        </div>
+        <div className='flex flex-col gap-5 pt-5 mt-5 border border-transparent border-t-[#27272a]'>
+          <p className='font-mono'>
+            <span className='text-lime-500'>❯</span>
+            <span className='text-accent'> status </span>
+            <span> --learning</span>
+          </p>
+          <p className='text-accent font-mono pl-5'>
+            Spring Data JPA • Spring Security • Maven • JUnit
+          </p>
         </div>
       </div>
     </TransitionWrapper>
