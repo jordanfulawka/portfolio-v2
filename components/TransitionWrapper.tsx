@@ -9,7 +9,8 @@ export default function TransitionWrapper({
   children: React.ReactNode;
 }) {
   const { ref, inView } = useInView({
-    threshold: 0.3,
+    threshold: 0,
+    rootMargin: '0px 0px -15% 0px',
     triggerOnce: true,
   });
 

@@ -45,56 +45,58 @@ export default function Navbar() {
         </p>
       </div>
 
-      <div className='hidden md:block'>
-        <ul className='flex items-center gap-6 lg:gap-8'>
-          <li
-            className={`cursor-pointer transition-transform active:scale-95 ${activeSection === 'projects' ? 'scale-90 text-accent' : ''}`}
-          >
-            <a onClick={() => scrollTo('projects')} className='font-mono'>
-              Projects
-            </a>
-          </li>
-          <li
-            className={`cursor-pointer transition-transform active:scale-95 ${activeSection === 'experience' ? 'scale-90 text-accent' : ''}`}
-          >
-            <a onClick={() => scrollTo('experience')} className='font-mono'>
-              Experience
-            </a>
-          </li>
-          <li
-            className={`cursor-pointer transition-transform active:scale-95 ${activeSection === 'contact' ? 'scale-90 text-accent' : ''}`}
-          >
-            <a onClick={() => scrollTo('contact')} className='font-mono'>
-              Contact
-            </a>
-          </li>
-          <li className='transition-transform active:scale-95'>
-            <a
-              href='/resume.pdf'
-              download
-              className='font-mono text-accent border border-accent px-4 py-1.5 hover:bg-accent hover:text-black transition-colors'
+      <div className='flex items-center gap-4 lg:gap-6'>
+        <div className='hidden md:block'>
+          <ul className='flex items-center gap-6 lg:gap-8'>
+            <li
+              className={`cursor-pointer transition-transform active:scale-95 ${activeSection === 'projects' ? 'scale-90 text-accent' : ''}`}
             >
-              Resume↗
-            </a>
-          </li>
-        </ul>
-      </div>
+              <a onClick={() => scrollTo('projects')} className='font-mono'>
+                Projects
+              </a>
+            </li>
+            <li
+              className={`cursor-pointer transition-transform active:scale-95 ${activeSection === 'experience' ? 'scale-90 text-accent' : ''}`}
+            >
+              <a onClick={() => scrollTo('experience')} className='font-mono'>
+                Experience
+              </a>
+            </li>
+            <li
+              className={`cursor-pointer transition-transform active:scale-95 ${activeSection === 'contact' ? 'scale-90 text-accent' : ''}`}
+            >
+              <a onClick={() => scrollTo('contact')} className='font-mono'>
+                Contact
+              </a>
+            </li>
+            <li className='transition-transform active:scale-95'>
+              <a
+                href='/resume.pdf'
+                download
+                className='font-mono text-accent border border-accent px-4 py-1.5 hover:bg-accent hover:text-black transition-colors'
+              >
+                Resume↗
+              </a>
+            </li>
+          </ul>
+        </div>
 
-      <button
-        className='md:hidden flex flex-col gap-1.5 p-2'
-        onClick={() => setMenuOpen(!menuOpen)}
-        aria-label='Toggle menu'
-      >
-        <span
-          className={`block w-6 h-0.5 bg-white transition-transform duration-200 ${menuOpen ? 'rotate-45 translate-y-2' : ''}`}
-        />
-        <span
-          className={`block w-6 h-0.5 bg-white transition-opacity duration-200 ${menuOpen ? 'opacity-0' : ''}`}
-        />
-        <span
-          className={`block w-6 h-0.5 bg-white transition-transform duration-200 ${menuOpen ? '-rotate-45 -translate-y-2' : ''}`}
-        />
-      </button>
+        <button
+          className='md:hidden flex flex-col gap-1.5 p-2'
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label='Toggle menu'
+        >
+          <span
+            className={`block w-6 h-0.5 bg-white transition-transform duration-200 ${menuOpen ? 'rotate-45 translate-y-2' : ''}`}
+          />
+          <span
+            className={`block w-6 h-0.5 bg-white transition-opacity duration-200 ${menuOpen ? 'opacity-0' : ''}`}
+          />
+          <span
+            className={`block w-6 h-0.5 bg-white transition-transform duration-200 ${menuOpen ? '-rotate-45 -translate-y-2' : ''}`}
+          />
+        </button>
+      </div>
 
       {menuOpen && (
         <div className='absolute top-full left-0 right-0 bg-black/95 backdrop-blur-sm md:hidden'>

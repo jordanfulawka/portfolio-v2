@@ -1,9 +1,7 @@
 'use client';
 
-import { usePerformance } from '@/context/PerformanceProvider';
 import { GitHubActivity } from '@/lib/types';
 import { useEffect, useState } from 'react';
-import { FaBolt } from 'react-icons/fa';
 
 const msg = "Hi, I'm Jordan.";
 
@@ -17,7 +15,6 @@ function timeAgo(dateStr: string): string {
 
 export default function Hero({ activity }: { activity: GitHubActivity }) {
   const [index, setIndex] = useState(0);
-  const { performanceMode, togglePerformanceMode } = usePerformance();
 
   useEffect(() => {
     const intervalID = setInterval(() => {
@@ -30,16 +27,7 @@ export default function Hero({ activity }: { activity: GitHubActivity }) {
   }, []);
 
   return (
-    <div className='text-white min-h-[90vh] max-w-7xl mx-auto font-mono flex flex-col justify-center gap-5 sm:gap-6 px-5 sm:px-10 md:px-16 lg:px-20 pt-20'>
-      <div className='flex items-center absolute right-0 top-20 p-5'>
-        <span className='text-xs'>Performance Mode:</span>
-        <FaBolt
-          color={performanceMode ? '#38bdf8' : ''}
-          onClick={togglePerformanceMode}
-          size={28}
-          className='cursor-pointer'
-        />
-      </div>
+    <div className='text-white min-h-[90vh] max-w-7xl mx-auto font-mono flex flex-col justify-center gap-5 sm:gap-6 px-5 sm:px-10 md:px-16 lg:px-20 pt-20 min-w-0'>
       <p className='tracking-wider text-lime-500 text-xs sm:text-sm'>
         STATUS: AVAILABLE FOR WORK
       </p>
@@ -70,8 +58,8 @@ export default function Hero({ activity }: { activity: GitHubActivity }) {
           </button>
         </a>
       </div>
-      <div className='flex flex-col sm:flex-row gap-3'>
-        <div className='border border-gray-700 bg-surface px-4 py-3 text-xs sm:text-sm w-full sm:w-fit max-w-full sm:max-w-md'>
+      <div className='flex flex-col sm:flex-row gap-3 min-w-0'>
+        <div className='border border-gray-700 bg-surface px-4 py-3 text-xs sm:text-sm w-full sm:w-fit max-w-full sm:max-w-md min-w-0'>
           <p className='text-muted tracking-widest text-xs mb-2'>
             LATEST COMMIT
           </p>
@@ -88,7 +76,7 @@ export default function Hero({ activity }: { activity: GitHubActivity }) {
             {activity.commit.message}
           </p>
         </div>
-        <div className='border border-gray-700 bg-surface px-4 py-3 text-xs sm:text-sm w-full sm:w-fit max-w-full sm:max-w-md'>
+        <div className='border border-gray-700 bg-surface px-4 py-3 text-xs sm:text-sm w-full sm:w-fit max-w-full sm:max-w-md min-w-0'>
           <p className='text-muted tracking-widest text-xs mb-2'>
             CODING ACTIVITY
           </p>

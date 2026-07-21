@@ -28,7 +28,7 @@ export default function Contact() {
             <div className='w-3 h-3 bg-[#22c55e] rounded-full' />
             <p className='text-xs font-mono text-gray-600 pl-3'>~/contact</p>
           </div>
-          <div className='flex-1 flex flex-col p-10 gap-3'>
+          <div className='flex-1 flex flex-col p-6 sm:p-8 md:p-10 gap-3'>
             <p>
               <span className='text-lime-500'>❯</span>
               <span className='text-accent'> contact </span>
@@ -42,33 +42,37 @@ export default function Contact() {
             <ul className='divide-y divide-[#27272a]'>
               <li className='py-3 first:pt-0'>
                 <a
-                  className='flex items-center gap-3'
+                  className='flex items-center gap-3 min-w-0 text-sm sm:text-base'
                   href='https://github.com/jordanfulawka'
                   target='_blank'
                 >
-                  <FiGithub />
-                  <span>github.com/jordanfulawka</span>
+                  <FiGithub className='shrink-0' />
+                  <span className='break-all'>github.com/jordanfulawka</span>
                 </a>
               </li>
               <li className='py-3'>
                 <a
-                  className='flex items-center gap-3'
+                  className='flex items-center gap-3 min-w-0 text-sm sm:text-base'
                   href='https://www.linkedin.com/in/jordanfulawka/'
                   target='_blank'
                 >
-                  <FaLinkedinIn />
-                  <span>linkedin.com/in/jordanfulawka</span>
+                  <FaLinkedinIn className='shrink-0' />
+                  <span className='break-all'>
+                    linkedin.com/in/jordanfulawka
+                  </span>
                 </a>
               </li>
               <li className='py-3 last:pb-0'>
                 <a
-                  className='flex items-center gap-3 justify-between cursor-pointer'
+                  className='flex items-center gap-3 justify-between cursor-pointer text-sm sm:text-base'
                   onClick={handleEmailClick}
                 >
-                  <div className='flex items-center gap-3'>
-                    <MdAlternateEmail />
+                  <div className='flex items-center gap-3 min-w-0'>
+                    <MdAlternateEmail className='shrink-0' />
 
-                    <span>jordan.fulawka@outlook.com</span>
+                    <span className='break-all'>
+                      jordan.fulawka@outlook.com
+                    </span>
                     <Toaster
                       position='bottom-right'
                       toastOptions={{
@@ -81,7 +85,9 @@ export default function Contact() {
                       }}
                     />
                   </div>
-                  <p className='text-xs text-gray-500'>click to copy</p>
+                  <p className='text-xs text-gray-500 shrink-0 hidden sm:block'>
+                    click to copy
+                  </p>
                 </a>
               </li>
             </ul>

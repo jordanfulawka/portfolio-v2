@@ -122,7 +122,7 @@ export default function About() {
             </div>
           </div>
         )}
-        <div className='grid grid-cols-2 font-mono gap-10'>
+        <div className='grid grid-cols-1 sm:grid-cols-2 font-mono gap-8 sm:gap-10'>
           <div className='flex flex-col gap-3'>
             <span className='text-accent uppercase tracking-widest'>
               Frontend
