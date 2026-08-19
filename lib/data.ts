@@ -61,6 +61,23 @@ export const projects: Project[] = [
     live: 'https://pact-client.onrender.com/',
     image: '/pact.png',
   },
+  {
+    title: 'Parsewell',
+    description:
+      "A job application tracker that uses AI to tailor your resume for each role. Paste in a job posting, and Parsewell (via Claude) parses it, compares it against ytour base resume, and suggests targeted edits - highlighting what to change and why. It also tracks each application's status end-to-end.",
+    tags: [
+      'Vite',
+      'Spring Boot',
+      'Spring Security',
+      'Spring JPA',
+      'Apache PDF Box',
+      'Jsoup',
+      'AWS',
+    ],
+    github: 'https://github.com/jordanfulawka/parsewell-api',
+    live: 'https://parsewell.app/',
+    image: '/parsewell.png',
+  },
 ];
 
 export const jobs: Job[] = [
