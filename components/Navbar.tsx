@@ -38,10 +38,13 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className='fixed top-0 left-0 z-50 right-0 flex items-center justify-between px-5 sm:px-8 py-4 text-sm sm:text-base bg-black/80 backdrop-blur-sm'>
-      <div>
-        <p className='font-mono font-bold tracking-widest text-white text-sm sm:text-base'>
+    <nav className='fixed top-0 left-0 z-50 right-0 flex items-center justify-between px-5 sm:px-8 py-6 text-sm sm:text-base bg-black/80 backdrop-blur-sm'>
+      <div className='flex items-center gap-3'>
+        <p className='font-sans text-white text-sm sm:text-base'>
           Jordan Fulawka
+        </p>
+        <p className='uppercase text-[#8A9099] text-sm font-mono'>
+          Full-stack developer
         </p>
       </div>
 
@@ -51,21 +54,21 @@ export default function Navbar() {
             <li
               className={`cursor-pointer transition-transform active:scale-95 ${activeSection === 'projects' ? 'scale-90 text-accent' : ''}`}
             >
-              <a onClick={() => scrollTo('projects')} className='font-mono'>
+              <a onClick={() => scrollTo('projects')} className='font-sans'>
                 Projects
               </a>
             </li>
             <li
               className={`cursor-pointer transition-transform active:scale-95 ${activeSection === 'experience' ? 'scale-90 text-accent' : ''}`}
             >
-              <a onClick={() => scrollTo('experience')} className='font-mono'>
+              <a onClick={() => scrollTo('experience')} className='font-sans'>
                 Experience
               </a>
             </li>
             <li
               className={`cursor-pointer transition-transform active:scale-95 ${activeSection === 'contact' ? 'scale-90 text-accent' : ''}`}
             >
-              <a onClick={() => scrollTo('contact')} className='font-mono'>
+              <a onClick={() => scrollTo('contact')} className='font-sans'>
                 Contact
               </a>
             </li>
@@ -73,9 +76,9 @@ export default function Navbar() {
               <a
                 href='/resume.pdf'
                 download
-                className='font-mono text-accent border border-accent px-4 py-1.5 hover:bg-accent hover:text-black transition-colors'
+                className='font-sans text-black border border-accent px-4 py-2 bg-accent hover:bg-[#A5E1FD] hover:text-black transition-colors rounded-md'
               >
-                Resume↗
+                Resume
               </a>
             </li>
           </ul>

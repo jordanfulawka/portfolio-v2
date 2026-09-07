@@ -44,12 +44,12 @@ export default function Hero({ activity }: { activity: GitHubActivity }) {
                   ?.scrollIntoView({ behavior: 'smooth' })
               }
             >
-              <button className='bg-accent px-5 py-3 text-black text-sm sm:text-base cursor-pointer w-full sm:w-auto sm:min-w-44 transition-transform active:scale-95 rounded-sm'>
+              <button className='bg-accent px-5 py-3 text-black text-sm sm:text-base cursor-pointer w-full sm:w-auto sm:min-w-44 transition-transform active:scale-95 rounded-sm hover:bg-[#A5E1FD]'>
                 View my work
               </button>
             </a>
             <a href='/resume.pdf' download>
-              <button className='border  px-5 py-3 text-sm sm:text-base cursor-pointer w-full sm:w-auto sm:min-w-44 transition-transform active:scale-95 rounded-sm'>
+              <button className='border px-5 py-3 text-sm sm:text-base cursor-pointer w-full sm:w-auto sm:min-w-44 transition-transform active:scale-95 rounded-sm hover:border-accent hover:text-accent'>
                 Download Resume
               </button>
             </a>

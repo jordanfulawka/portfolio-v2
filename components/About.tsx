@@ -39,7 +39,7 @@ export default function About() {
         id='about'
       >
         <div className='flex flex-col lg:flex-row items-center gap-6 lg:gap-10'>
-          <div className='shrink-0 w-full max-w-xs sm:max-w-sm lg:w-72 xl:w-80'>
+          {/* <div className='shrink-0 w-full max-w-xs sm:max-w-sm lg:w-72 xl:w-80'>
             <Image
               alt='placeholder picture'
               src='/self_pic.jpg'
@@ -47,7 +47,7 @@ export default function About() {
               width={300}
               height={300}
             />
-          </div>
+          </div> */}
           <div className='flex flex-col gap-8 w-full lg:gap-0 lg:h-96 lg:justify-around mb-5'>
             <div>
               <h1 className='text-2xl sm:text-3xl lg:text-4xl xl:text-5xl mb-4 font-mono'>
