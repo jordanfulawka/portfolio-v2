@@ -10,33 +10,28 @@ function timeAgo(dateStr: string): string {
 
 function GitHubStatus({ activity }: { activity: GitHubActivity }) {
   return (
-    <div className='flex flex-col sm:flex-row gap-3 min-w-0'>
-      <div className='border border-gray-700 bg-surface px-4 py-3 text-xs sm:text-sm w-full sm:w-fit max-w-full sm:max-w-md min-w-0'>
+    <div className='flex flex-col sm:flex-row min-w-0'>
+      {/* sm:w-fit max-w-full sm:max-w-md */}
+      <div className='border border-gray-700 bg-surface px-4 py-3 text-xs sm:text-sm w-fit min-w-0 rounded-l-xl max-w-150'>
         <p className='text-muted tracking-widest text-xs mb-2'>LATEST COMMIT</p>
-        <p>
-          <span className='text-lime-500'>❯ </span>
-          <span className='text-accent'>jordanfulawka/</span>
-          <span className='text-foreground'>{activity.commit.repo}</span>
+        <p className='font-mono'>
+          <span className='text-accent'>{activity.commit.repo}</span>
           <span className='text-muted'> · {timeAgo(activity.commit.date)}</span>
+          <span> · {activity.commit.message}</span>
         </p>
-        <p className='text-slate-400 mt-1 pl-4 truncate'>
-          {activity.commit.message}
-        </p>
+        <p className='text-slate-400 mt-1 pl-4 truncate'></p>
       </div>
       <div className='border border-gray-700 bg-surface px-4 py-3 text-xs sm:text-sm w-full sm:w-fit max-w-full sm:max-w-md min-w-0'>
-        <p className='text-muted tracking-widest text-xs mb-2'>
-          CODING ACTIVITY
-        </p>
-        <p>
-          <span className='text-lime-500'>❯ </span>
-          <span className='text-muted'>this week</span>
+        <p className='text-muted tracking-widest text-xs mb-2'>THIS WEEK</p>
+        <p className='font-mono'>
           <span className='text-foreground'>
             {` ${activity.cumulative_total.text}`}
           </span>
         </p>
-        <p className='mt-1'>
-          <span className='text-lime-500'>❯ </span>
-          <span className='text-muted'>daily avg</span>
+      </div>
+      <div className='border border-gray-700 bg-surface px-4 py-3 text-xs sm:text-sm w-full sm:w-fit max-w-full sm:max-w-md min-w-0 rounded-r-xl'>
+        <p className='text-muted tracking-widest text-xs mb-2'>DAILY AVG</p>
+        <p className='font-mono'>
           <span className='text-foreground'>
             {` ${activity.daily_average.text}`}
           </span>
